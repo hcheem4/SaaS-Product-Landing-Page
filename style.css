@@ -78,9 +78,15 @@ a {
   font-size: 14px;
   letter-spacing: 0.35px;
   color: rgb(36, 62, 99);
-  border-bottom-width: 2px;
-  border-color: transparent;
+  border-bottom: 2px solid transparent;
   transition: all 300ms ease;
+}
+
+
+.nav__links li:not(:last-child) .nav__link--anchor:hover {
+  border-bottom: 2px solid rgb(100, 21, 255);
+  color: rgb(100, 21, 255);
+
 }
 
 .nav__link--anchor--btn {
@@ -88,7 +94,10 @@ a {
   background-color: rgba(100, 21, 255, 1);
   padding: 12px 32px;
   color: rgba(247, 250, 252, 1);
+  outline: none;
+  border: none;
 }
+
 
 .nav__link--anchor--btn:hover {
   background-color: rgba(80, 17, 204, 1);
@@ -632,7 +641,6 @@ footer {
   background-color: rgb(100, 21, 255);
   color: rgb(247, 250, 252);
   padding: 96px 32px;
-
 }
 
 .links {
@@ -676,7 +684,6 @@ footer {
 .link__list--anchor:hover {
   border-color: rgb(247, 250, 252);
 }
-
 
 .divider {
   margin-top: 64px;
@@ -728,4 +735,3 @@ footer {
 .social__link--anchor:hover {
   background-color: rgb(203, 213, 224);
 }
-
