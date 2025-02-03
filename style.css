@@ -157,8 +157,13 @@ input {
   font-size: 16px;
   transition: all 300ms ease;
   border: 2px solid rgb(226, 232, 240); /* Explicitly set border */
-  color: rgb(32, 62, 99);
+  color: rgb(255, 255, 255);
   background-color: white;
+}
+
+input::placeholder {
+  color: rgb(226, 232, 240); /* Change to desired color */
+  opacity: 1; /* Ensures full visibility */
 }
 
 .input__btn {
@@ -645,7 +650,27 @@ FOOTER
 footer {
   background-color: rgb(100, 21, 255);
   color: rgb(247, 250, 252);
-  padding: 96px 32px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first__row--links {
+  display: flex;
+}
+
+.second__row--links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 96px;
+}
+
+.second__row--links .link {
+   /* Makes both links take equal width */
+  min-width: 200px; /* Prevents them from shrinking too much */
+  text-align: center;
 }
 
 .links {
@@ -667,10 +692,7 @@ footer {
 }
 
 .link__list {
-  display: flex;
-  flex-direction: column;
   margin-top: 24px;
-  align-items: center;
   text-align: center;
 }
 
@@ -699,7 +721,8 @@ footer {
   width: 100%;
   border-bottom-width: 2px;
   border-color: rgb(116, 44, 255) !important;
-  border: solid;
+  border-style: solid;
+  width: 326px;
 }
 
 .footer__info {
@@ -895,6 +918,10 @@ footer {
     margin-top: 96px;
   }
 
+  input {
+    padding-right: 32px; /* Removes excessive right padding */
+  }
+
   .input__btn {
     right: auto;
     top: auto;
@@ -1025,18 +1052,13 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
 
   .link {
-    width: calc(100% / 4);
+    width: calc(100% / 3);
     margin-top: 48px;
     padding: 0 16px;
-  }
-
-  .legal {
-    flex: 1 1 100%; /* Makes the legal section full-width */
-    text-align: center;
-    margin-top: 30px; /* Adds spacing above */
   }
 
   .copyright {
@@ -1045,5 +1067,9 @@ footer {
 
   .social__links {
     margin-top: 32px;
+  }
+
+  .footer__info {
+    padding-bottom: 32px;
   }
 }
