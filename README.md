@@ -40,5 +40,5 @@ experience across mobile, tablet, and desktop devices.
 ---
 
 You can view the live version of the project here: [SaaS Product Landing 
-Page](https://github.com/hcheem4/SaaS-Product-Landing-Page)
+Page](https://hcheem4.github.io/SaaS-Product-Landing-Page/)
 
