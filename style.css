@@ -82,11 +82,9 @@ a {
   transition: all 300ms ease;
 }
 
-
 .nav__links li:not(:last-child) .nav__link--anchor:hover {
   border-bottom: 2px solid rgb(100, 21, 255);
   color: rgb(100, 21, 255);
-
 }
 
 .nav__link--anchor--btn {
@@ -97,7 +95,6 @@ a {
   outline: none;
   border: none;
 }
-
 
 .nav__link--anchor--btn:hover {
   background-color: rgba(80, 17, 204, 1);
@@ -160,6 +157,8 @@ input {
   font-size: 16px;
   transition: all 300ms ease;
   border: 2px solid rgb(226, 232, 240); /* Explicitly set border */
+  color: rgb(32, 62, 99);
+  background-color: white;
 }
 
 .input__btn {
@@ -200,11 +199,14 @@ input {
   line-height: 1.25; /* Optional for text alignment consistency */
 }
 
+.header__bottom-pic {
+  opacity: 0.5;
+}
+
 .header__bottom-pic--wrapper {
   margin-top: 16px;
   padding-right: 64px;
   width: 100%;
-  opacity: 0.5;
 }
 
 .header__img {
@@ -264,8 +266,10 @@ FEATURES
 
 .feature__wrapper {
   display: flex;
-  align-items: flex-start;
-  text-align: left;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  text-align: center;
   padding: 32px 8px;
   margin: 0 16px;
 }
@@ -470,6 +474,7 @@ PRICING
 .pricing__title {
   font-size: 48px;
   font-weight: 900;
+  letter-spacing: 0.4px;
 
   line-height: 72px;
   color: rgb(36, 62, 99);
@@ -653,6 +658,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .link__title {
@@ -664,6 +670,8 @@ footer {
   display: flex;
   flex-direction: column;
   margin-top: 24px;
+  align-items: center;
+  text-align: center;
 }
 
 .link__list--item {
@@ -734,4 +742,308 @@ footer {
 
 .social__link--anchor:hover {
   background-color: rgb(203, 213, 224);
+}
+
+.btn__menu {
+  height: 24px;
+  width: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(36, 62, 99);
+  display: none;
+}
+
+.fa-bars {
+  height: 80px;
+  width: 80px;
+}
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+
+  .btn__menu {
+    display: flex;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .btn__menu:hover {
+    color: rgb(100, 21, 255);
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 464px 0;
+  }
+
+  .header__description--wrapper {
+    max-width: 512px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 96px;
+  }
+
+  .header__description--title {
+    font-size: 30px;
+  }
+
+  .header__description--para {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .input__wrapper {
+    margin: 0 32px;
+    max-width: 448px;
+  }
+
+  .input__btn {
+    padding: 16px 0;
+  }
+
+  .header__description--subtitle {
+    margin-top: 48px;
+    font-size: 14px;
+  }
+
+  .header__img--wrapper {
+    margin-top: 48px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__bottom-pic--wrapper {
+    padding-right: 0;
+  }
+
+  .feature {
+    width: 50%;
+  }
+
+  .feature__wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .features__description--para {
+    font-size: 16px;
+  }
+
+  .quality__title {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  .quality__subtitle {
+    font-size: 16px;
+  }
+
+  .quality__para {
+    font-size: 16px;
+  }
+
+  .steps__title {
+    font-size: 36px;
+  }
+
+  .pricing__title {
+    text-align: center;
+  }
+
+  .pricing__para {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .plan {
+    margin-right: 0;
+  }
+
+  .pricing__plans--wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer__info {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .social__links {
+    margin-top: 12px; /* Add space above social links */
+  }
+}
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+@media (max-width: 550px) {
+  .header__description--title {
+    text-align: center;
+  }
+
+  .header__description--subtitle {
+    margin-top: 96px;
+  }
+
+  .input__btn {
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    margin: 16px 8px 16px 0;
+  }
+
+  .features__description--title {
+    font-size: 36px;
+    text-align: center;
+    line-height: 54px;
+  }
+
+  .features__description--para {
+    font-size: 14px;
+    line-height: 22.75px;
+  }
+
+  .feature {
+    width: 100%;
+  }
+
+  .feature__wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature__description {
+    align-items: center;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 336px;
+    margin: 4px auto;
+    text-align: center;
+  }
+
+  .quality__wrapper {
+    flex-direction: column-reverse;
+    padding: 80px 0;
+  }
+
+  .description__wrapper {
+    margin: 64px 19px 0 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img__wrapper {
+    width: 100%;
+    margin: 0 19px;
+  }
+
+  .quality__subtitle {
+    text-align: center;
+  }
+
+  .quality__title {
+    margin-top: 16px;
+    font-size: 30px;
+    letter-spacing: 0.75px;
+    text-align: center;
+  }
+
+  .quality__btn {
+    text-align: center;
+  }
+
+  .quality__para {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .steps__wrapper {
+    flex-direction: column;
+  }
+
+  .steps__description--wrapper {
+    margin: 64px 19px 0 19px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps__title {
+    font-size: 30px; /* Adjust this value as needed */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+
+  .steps__link {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps__text {
+    margin-left: 0;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text__para {
+    text-align: center;
+  }
+
+  .pricing__title {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  .pricing__para {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 36px;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link {
+    width: calc(100% / 4);
+    margin-top: 48px;
+    padding: 0 16px;
+  }
+
+  .legal {
+    flex: 1 1 100%; /* Makes the legal section full-width */
+    text-align: center;
+    margin-top: 30px; /* Adds spacing above */
+  }
+
+  .copyright {
+    margin-top: 32px;
+  }
+
+  .social__links {
+    margin-top: 32px;
+  }
 }
